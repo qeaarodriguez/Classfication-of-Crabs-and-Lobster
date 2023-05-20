@@ -6,15 +6,15 @@ import cv2
 
 def main():
     # set up the Streamlit app
-    st.write("Name: Joemart Gridson T. Turaray")
-    st.write("Section: CPE32S4")
+    st.write("Name: ERVAND ARTHUR RODRIGUEZ ")
+    st.write("Section: CPE32S5")
     st.write("Instructor: Dr. Jonathan Taylar")
-    st.title("Class Weather ( Sunrise/Cloudy)")
-    st.write("This app classifies whether an uploaded image contains a Sunrise or Cloudy images using a pre-trained convolutional neural network model.")
+    st.title("Classifies the Crab and Lobster Images)")
+    st.write("This app classifies whether the image is Crab or Lobster")
    
     @st.cache_resource
     def load_model():
-        model = tf.keras.models.load_model('weights-improvement-05-0.99.hdf5')
+        model = tf.keras.models.load_model('weights-improvement-06-0.97.hdf5')
         return model
     
     def import_and_predict(image_data, model):
@@ -27,10 +27,10 @@ def main():
         return prediction
 
     model = load_model()
-    class_names = ["CLOUDY", "SUNRISE"]
+    class_names = ["Crab", "Lobster"]
     
 
-    file = st.file_uploader("Choose a Cloudy or Sunrise picture from your computer", type=["jpg", "png", "jpeg"])
+    file = st.file_uploader("Select a image of Crab or Lobster in your computer", type=["jpg", "png", "jpeg"])
 
     if file is None:
         st.text("Please upload an image file")
