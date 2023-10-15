@@ -6,9 +6,7 @@ import cv2
 
 def main():
     # set up the Streamlit app
-    st.write("Name: ERVAND ARTHUR RODRIGUEZ ")
-    st.write("Section: CPE32S5")
-    st.write("Instructor: Dr. Jonathan Taylar")
+
     st.title("Classifies the Crab and Lobster Images)")
     st.write("This app classifies whether the image is Crab or Lobster")
    
